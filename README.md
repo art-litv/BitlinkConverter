@@ -11,7 +11,6 @@ The script simply uses API to convert a link to a bitlink
 
 Usage
 -----
------
 
 With [Bitly](https://bitly.com/) you can create bitlinks by using API
 
@@ -21,7 +20,6 @@ This Python script has the following features:
 if you insert a simple link you will get a bitlink. If you insert a bitlink you will get the number of times this bitlink has been clicked.
 
 Installing
-----------
 ----------
 
 To use this Python script you will need 2 libraries: requests and python-dotenv. You can install them using `pip`.
@@ -39,7 +37,6 @@ Now you can use the script through cmd. Insert your link instead of `<link>`:
     python main.py <link>
 
 Examples
-----------
 ----------
 
 `<link>` as simple link:
