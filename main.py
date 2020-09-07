@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 import os
 import argparse
 
-load_dotenv()
-
 HEADERS = {
   'Authorization': f'Bearer {os.getenv("BITLY_TOKEN")}'
 }
@@ -38,6 +36,7 @@ def count_bitlink_clicks(headers, bitlink, unit="day", units=-1):
 
 
 def main():
+  load_dotenv()
   parser = argparse.ArgumentParser()
   parser.add_argument("link", help="link to create a bitlink or bitlink to see sum of clicks")
   url = parser.parse_args().link
