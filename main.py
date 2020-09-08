@@ -37,7 +37,9 @@ def count_bitlink_clicks(token, bitlink, unit="day", units=-1):
   return response.json()['total_clicks']
 
 
-def main(token):
+def main():
+  load_dotenv()
+  token = os.getenv("BITLY_TOKEN")
   parser = argparse.ArgumentParser()
   parser.add_argument("link", help="link to create a bitlink or bitlink to see sum of clicks")
   url = parser.parse_args().link
@@ -58,8 +60,5 @@ def main(token):
 
 
 if __name__ == '__main__':
-  load_dotenv()
-  TOKEN = os.getenv("BITLY_TOKEN")
-  main(TOKEN)
-
+  main()
 
